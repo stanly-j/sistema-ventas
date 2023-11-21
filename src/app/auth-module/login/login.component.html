@@ -1,0 +1,61 @@
+<div class="primary">
+  <nb-card class="form-control-group">
+    <nb-card-body>
+      <form [formGroup]="loginForm">
+        <h1>Login</h1>
+        <nb-form-field>
+          <label></label>
+          <input nbInput formControlName="user" placeholder="User" />
+        </nb-form-field>
+
+        <nb-form-field>
+          <input
+            nbInput
+            formControlName="password"
+            [type]="getInputType()"
+            placeholder="Password"
+          />
+          <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+            <nb-icon
+              [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+              pack="eva"
+              [attr.aria-label]="
+                showPassword ? 'hide password' : 'show password'
+              "
+            >
+            </nb-icon>
+          </button>
+        </nb-form-field>
+
+        <!-- CheckBox de recordar -->
+        <div style="display: flex; margin-top: 2rem">
+          <nb-toggle>remember me</nb-toggle>
+        </div>
+
+        <!-- Boton de login -->
+        <button
+          nbButton
+          (click)="login()"
+          style="margin-top: 1rem; width: 100%"
+        >
+          Login
+        </button>
+      </form>
+    </nb-card-body>
+    <nb-card-footer
+      ><!-- Boton olvidar contracena -->
+      <div style="margin-bottom: 2rem">
+        <button
+          (click)="recovery()"
+          style="margin: auto"
+          ghost
+          status="primary"
+          size="tiny"
+          nbButton
+        >
+          Forgot Password?
+        </button>
+      </div></nb-card-footer
+    >
+  </nb-card>
+</div>

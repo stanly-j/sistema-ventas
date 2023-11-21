@@ -1,7 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-nb-form-field,
-button {
-  margin-top: 1rem;
+.form-control-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  height: 100%;
+}
+
+.primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nb-form-field {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 input.ng-invalid.ng-touched {
